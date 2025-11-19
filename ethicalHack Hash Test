@@ -1,0 +1,49 @@
+# Python script for matching hash values in a dataset
+import hashlib
+import os
+
+# Path to the dataset
+DATASET_DIR = r"c:\Users\folim\OneDrive\Documents\school\College Fall Semester 2025\CYBR 4843 (Ethical Hacking)\Project\Milestone_1_dataset\Milestone_1_dataset"
+
+# Example: List all files in the plain_files directory
+hash_file_path = os.path.join(DATASET_DIR, "message_hash.md5")
+plain_files_dir = os.path.join(DATASET_DIR, "plain_files")
+file_list = os.listdir(plain_files_dir)
+print("Files in dataset:", file_list[:10])  # Show first 10 files
+
+# Example: Read the contents of file0.txt
+file_path = os.path.join(plain_files_dir, "file0.txt")
+with open(file_path, "r", encoding="utf-8") as f:
+    content = f.read()
+    print("Contents of file0.txt:", content)
+
+
+
+# Read the target MD5 Hash from the file
+with open(hash_file_path, 'r') as hash_file:
+    target_hash = hash_file.read().strip()
+
+# Function to compute MD5 hash of a file
+def compute_md5(file_path):
+    hash_md5 = hashlib.md5()
+    with open(file_path, "rb") as f:
+        for chunk in iter(lambda: f.read(4096), b""):
+            hash_md5.update(chunk)
+    return hash_md5.hexdigest()
+
+# Loop through each file in the plain_files directory
+match_found = None
+for filename in os.listdir(plain_files_dir):
+    file_path = os.path.join(plain_files_dir, filename)
+    if os.path.isfile(file_path):
+        file_hash = compute_md5(file_path)
+        print(f"Computed MD5 for {filename}: {file_hash}")
+        if file_hash == target_hash:
+            print(f"Match found! The file '{filename}' matches the target hash.")
+            break
+
+# Output the result
+if match_found:
+    print(f"Match found! The file '{match_found}' matches the target hash.")
+else:
+    print("No matching file found.")
