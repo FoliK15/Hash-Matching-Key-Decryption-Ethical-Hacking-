@@ -9,10 +9,10 @@ from cryptography.hazmat.backends import default_backend
 from cryptography.hazmat.primitives import hashes 
 
 #file paths
-AESfile = Path(r"C:\Users\folim\OneDrive\Documents\school\College Fall Semester 2025\CYBR 4843 (Ethical Hacking)\Project\MILESTONE 4 DATA\dataset\aes")
-HASHESfile = Path(r"C:\Users\folim\OneDrive\Documents\school\College Fall Semester 2025\CYBR 4843 (Ethical Hacking)\Project\MILESTONE 4 DATA\dataset\hashes")
-MESSAGEfile = Path(r"C:\Users\folim\OneDrive\Documents\school\College Fall Semester 2025\CYBR 4843 (Ethical Hacking)\Project\MILESTONE 4 DATA\dataset\messages")
-RSAfile = Path(r"C:\Users\folim\OneDrive\Documents\school\College Fall Semester 2025\CYBR 4843 (Ethical Hacking)\Project\MILESTONE 4 DATA\dataset\rsa")
+AESfile = *USE DESIRED FILE PATH*
+HASHESfile = *USE DESIRED FILE PATH*
+MESSAGEfile = *USE DESIRED FILE PATH*
+RSAfile = *USE DESIRED FILE PATH*
 
 
 ## helper functions to keep the code clean
@@ -190,4 +190,5 @@ print(f"    MD5(plaintext) : {md5_hex(pt)} == {TARGET_MASTER_MD5}  [OK]")
 
 print("\n----- BEGIN PLAINTEXT -----")
 print(decode_text(pt).rstrip())
+
 print("-----  END PLAINTEXT  -----\n")
