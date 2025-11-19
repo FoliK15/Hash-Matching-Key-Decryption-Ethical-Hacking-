@@ -17,10 +17,6 @@ RSAfile = # *USE DESIRED FILE PATH*
 
 ## helper functions to keep the code clean
 
-# computes MD5 hash of bytes and returns hex string
-def med5_hex(b: bytes) -> str:
-    return hashlib.md5(b).hexdigest()
-
 # opens file and returns its bytes
 def read_bytes(p: Path) -> bytes:
     return p.read_bytes()
@@ -192,4 +188,5 @@ print("\n----- BEGIN PLAINTEXT -----")
 print(decode_text(pt).rstrip())
 
 print("-----  END PLAINTEXT  -----\n")
+
 
