@@ -55,7 +55,7 @@ print(f"Target Master MD5: {TARGET_MASTER_MD5}")
 def find_matching_file(target_hash: str, directory: Path) -> Path | None:
     for f in sorted(directory.iterdir(), key=lambda p: p.name):
         if f.is_file():
-            file_hash = med5_hex(read_bytes(f))
+            file_hash = md5_hex(read_bytes(f))
             print(f"Computed MD5 for {f.name}: {file_hash}")
             if file_hash == TARGET_AES_MD5:
                 print(f"Match found! The file '{f.name}' matches the target hash.")
@@ -188,5 +188,6 @@ print("\n----- BEGIN PLAINTEXT -----")
 print(decode_text(pt).rstrip())
 
 print("-----  END PLAINTEXT  -----\n")
+
 
 
