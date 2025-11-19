@@ -4,8 +4,8 @@ from cryptography.hazmat.primitives.asymmetric import padding
 import os
 
 # File paths
-key_private_path = r"c:\Users\folim\OneDrive\Documents\school\College Fall Semester 2025\CYBR 4843 (Ethical Hacking)\Project\private_key.pem"
-emessage_path = r"c:\Users\folim\OneDrive\Documents\school\College Fall Semester 2025\CYBR 4843 (Ethical Hacking)\Project\emessage.etxt"
+key_private_path = *USE DESIRED FILE PATH*
+emessage_path = *USE DESIRED FILE PATH*
 
 
 # Loading the private key
@@ -45,4 +45,5 @@ except UnicodeDecodeError:
     # Not text: show a short hex preview so you still see the content in-terminal
     hex_preview = " ".join(f"{b:02x}" for b in pt[:96])
     print("[not UTF-8 text] hex preview (first 96 bytes):")
+
     print(hex_preview)
