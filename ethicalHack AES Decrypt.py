@@ -3,8 +3,8 @@ from cryptography.hazmat.backends import default_backend
 from pathlib import Path
 
 # File Paths
-AES_key_path = *USE DESIRED FILE PATH*
-encrypted_file_path = *USE DESIRED FILE PATH*
+AES_key_path = # *USE DESIRED FILE PATH*
+encrypted_file_path = # *USE DESIRED FILE PATH*
 
 # Load AES key
 key = Path(AES_key_path).read_bytes()            # 32 raw ASCII bytes = 256 bits
@@ -24,3 +24,4 @@ except Exception:
     pass
 
 print(pt.decode('utf-8', errors='replace'))
+
