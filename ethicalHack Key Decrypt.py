@@ -4,8 +4,8 @@ from cryptography.hazmat.primitives.asymmetric import padding
 import os
 
 # File paths
-key_private_path = *USE DESIRED FILE PATH*
-emessage_path = *USE DESIRED FILE PATH*
+key_private_path = # *USE DESIRED FILE PATH*
+emessage_path = # *USE DESIRED FILE PATH*
 
 
 # Loading the private key
@@ -47,3 +47,4 @@ except UnicodeDecodeError:
     print("[not UTF-8 text] hex preview (first 96 bytes):")
 
     print(hex_preview)
+
