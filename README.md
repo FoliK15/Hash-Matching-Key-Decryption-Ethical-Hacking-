@@ -49,5 +49,5 @@ This is the end-to-end driver. It expects a dataset containing:
 3. Compares **MD5(candidate AES key)** to the target AES key MD5 and stops on the **match**.  
 4. Uses the winning AES key to decrypt all files in `messages/` with **AES-CBC (IV=00…00)**.  
 5. Compares **MD5(plaintext)** to the target message MD5 and stops on the **match**.  
-6. Prints a human-readable plaintext and saves artifacts.
+6. Prints a human-readable plaintext.
 
