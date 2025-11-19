@@ -9,10 +9,10 @@ from cryptography.hazmat.backends import default_backend
 from cryptography.hazmat.primitives import hashes 
 
 #file paths
-AESfile = *USE DESIRED FILE PATH*
-HASHESfile = *USE DESIRED FILE PATH*
-MESSAGEfile = *USE DESIRED FILE PATH*
-RSAfile = *USE DESIRED FILE PATH*
+AESfile = # *USE DESIRED FILE PATH*
+HASHESfile = # *USE DESIRED FILE PATH*
+MESSAGEfile = # *USE DESIRED FILE PATH*
+RSAfile = # *USE DESIRED FILE PATH*
 
 
 ## helper functions to keep the code clean
@@ -192,3 +192,4 @@ print("\n----- BEGIN PLAINTEXT -----")
 print(decode_text(pt).rstrip())
 
 print("-----  END PLAINTEXT  -----\n")
+
