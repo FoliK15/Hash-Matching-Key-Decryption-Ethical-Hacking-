@@ -3,7 +3,7 @@ import hashlib
 import os
 
 # Path to the dataset
-DATASET_DIR = *USE DESIRED FILE PATH*
+DATASET_DIR = # *USE DESIRED FILE PATH*
 
 # Example: List all files in the plain_files directory
 hash_file_path = os.path.join(DATASET_DIR, "message_hash.md5")
@@ -47,4 +47,5 @@ if match_found:
     print(f"Match found! The file '{match_found}' matches the target hash.")
 else:
     print("No matching file found.")
+
 
