@@ -51,3 +51,5 @@ This is the end-to-end driver. It expects a dataset containing:
 5. Compares **MD5(plaintext)** to the target message MD5 and stops on the **match**.  
 6. Prints a human-readable plaintext.
 
+---
+[WATCH THE CODE IN ACTION](https://1drv.ms/v/c/8b21c709b86e5617/IQAVzQCIUteKRpWkJXxz8NbWAR7jL_8RvQG_TPW_neQtvQg?e=I6K2Um)
